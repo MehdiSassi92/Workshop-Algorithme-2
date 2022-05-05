@@ -1,0 +1,22 @@
+ALGORITHM " Algo2_Pb1_Sol2"
+
+Var
+set1, set2 : HASHTABLE <INTEGER, INTEGER>;
+i, j, sum : INTEGER;
+
+BEGIN 
+sum := 0;
+For i from 0 to set1.lenght-1 Step 1 Do
+    If (set2.lookup(set1[i] = True)) Then
+        sum := sum + set1[i];
+    End If
+End For
+For j from 0 to set2.lenght-1 Step 1 Do
+    If (set1.lookup(set2[j] = True)) Then
+        sum := sum + set2[j];
+    End If
+End For
+
+Write("The sum of common elements is", sum);
+
+END;
